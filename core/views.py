@@ -9,9 +9,20 @@ def index(request):
         bedrooms = int(request.POST["bedrooms"])
         print(budget)
         main_df = app(budget, bedrooms, distance)
-        columns = ['address', 'sq ft', 'Unit Type', 'Available', 'Bedroom(s)', 'Bathroom(s)', 'Link']
+        columns = ['address', 'sq ft', 'Unit Type', 'Rent', 'Bedroom(s)', 'Bathroom(s)', 'Link']
     
         df = main_df[columns]
+
+        renamed_columns = {
+            'address': 'Address',
+            'sq ft': 'Size (sq ft)',
+            'Unit Type': 'Unit Type',
+            'Rent': 'Rent',
+            'Bedroom(s)': 'Bedrooms',
+            'Bathroom(s)': 'Bathrooms',
+            'Link': 'Link'
+        }
+        df = df.rename(columns=renamed_columns)
 
         context = {}
 

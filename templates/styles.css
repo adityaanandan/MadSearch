@@ -4,10 +4,21 @@
 
 html, body {
     height: 100%;
-    background-color: #333333;
     overflow: hidden;
+    background-image: url('./madison-aerial-still.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
 }
 
+.centered-image {
+    text-align: center;
+}
+
+.centered-image img {
+    width: 200px;
+    height: 200px;
+}
 
 .form-holder {
     font-family: 'Poppins', sans-serif;
@@ -157,7 +168,7 @@ html, body {
 }
 
 .styled-table thead tr {
-    background-color: #009879;
+    background-color: #a90504;
     color: #ffffff;
     text-align: left;
 }
@@ -176,5 +187,5 @@ html, body {
 }
 
 .styled-table tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
+    border-bottom: 2px solid #a90504;
 }
